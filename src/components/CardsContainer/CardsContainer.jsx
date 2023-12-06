@@ -1,33 +1,24 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react'
+
+import { useContext, useEffect } from 'react'
 import CardCharacter from '../CardCharacter/CardCharacter';
 import './CardsContainer.css'
+import CharacterContext from '../../Context/CharacterContext';
+import Filters from '../Filters/Filters';
+import Pagination from '../Pagination/Pagination';
 export default function CardsContainer() {
 
-    // en este estado vamos a almacenar la data traida en la peticion a la api
-    // le pongo [] porque los voy a almacenar en un array
-    const [characters, setCharacters] = useState([])
-
-
-    const urlApi = 'https://rickandmortyapi.com/api/character';
-
-    const requestApi = async () => {
-        const response = await axios.get(urlApi);
-        // console.log(response.data.results);
-        const arrCharacters = response.data.results;
-        setCharacters(arrCharacters)
-    }
+    const {getCharacters, characters} = useContext(CharacterContext)
 
     useEffect(() => {
-
-        requestApi();
-
+        getCharacters()
     }, [])
     // console.log(characters);
 
     return (
         <div className='cards_container_container'>
             <h1>Lista de personajes</h1>
+            <Filters/>
+            <Pagination/>
             <div className='cards_container'>
                 {
                     characters?.map((character) => (
@@ -35,7 +26,7 @@ export default function CardsContainer() {
                     ))
                 }
             </div>
-
+            <Pagination/>
         </div>
     )
 }

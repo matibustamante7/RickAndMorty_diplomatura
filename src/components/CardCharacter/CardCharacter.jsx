@@ -8,12 +8,12 @@ export default function CardCharacter(characterData) {
     return (
         <div className="card_container" >
             <img src={character.image} alt={character.name} />
-            <h2>{character.name}</h2>
-            <h4><b>Species: </b>{character.species}</h4>
-            <h4><b>Gender: </b>{character.gender}</h4>
-            <button>
-                <Link to={`/${character.id}`}>Ver mas...</Link>
-            </button>
+            <div className="card_content">
+                <h2>{character.name}</h2>
+                <button>
+                    <Link to={`/${character.id}`} className='link_btn'>Ver mas...</Link>
+                </button>
+            </div>
         </div>
     )
 }

@@ -4,10 +4,38 @@
     align-items: center;
     justify-content: space-evenly;
     border-radius: 15px;
-    border: 2px solid #000;
+    border: 2px solid var(--tardis-blue);
     background-color: var(--texas);
-    width: 340px;
+    width: 350px;
+    /* height: 500px; */
 }
 .card_container img{
     border-radius: 15px 15px 0px 0px;
+    width: 100%;
+}
+
+.card_content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    text-align: center;
+}
+.card_content button{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--Mystery);
+    width: 200px;
+}
+.link_btn{
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--tardis-blue);
+}
+.link_btn:hover{
+    text-decoration: underline;
 }

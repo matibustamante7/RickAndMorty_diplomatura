@@ -1,10 +1,21 @@
+
+.container_detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
 .card_detail__container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
-    margin-top:100px ;
-    height: 50vh;
+    /* margin: auto; */
+    /* height: 50vh; */
+    border: 2px solid var(--tardis-blue);
+    padding: 2rem;
+    background-color: var(--texas);
+    width: fit-content;
 }
 .subcontainer{
     display: flex;
@@ -13,14 +24,15 @@
     justify-content: space-evenly;
     gap: .5rem;
 }
-h2{
+.subcontainer h2{
     font-size: 52px;
     font-weight: 800;
 }
-h3{
+.subcontainer h3{
     font-size: 32px;
     font-weight: 600;
 }
 .subcontainer img{
+    border: 2px solid var(--tardis-blue);
     border-radius: 50%;
 }

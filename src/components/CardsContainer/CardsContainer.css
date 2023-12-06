@@ -14,5 +14,6 @@
     gap:2rem;
     margin: auto;
     padding: 2rem;
-    width: 60vw;
+    /* border: 2px solid white; */
+    width: 80vw;
 }

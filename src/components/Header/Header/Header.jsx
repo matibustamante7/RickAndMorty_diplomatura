@@ -1,7 +1,17 @@
 // import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
+import { useContext } from 'react'
+import CharacterContext from '../../../Context/CharacterContext'
 export default function Header() {
+
+    const {getCharacterByName} = useContext(CharacterContext);
+
+    const searchCharacterByName = (e) =>{
+        const name = e.target.value;
+        getCharacterByName(name)
+    }
+
     return (
         <div className="container">
 
@@ -13,7 +23,7 @@ export default function Header() {
                 </div>
 
                 <div className="searchbar">
-                    <input type="search" name="input_searchbar" id="input_searchbar" />
+                    <input type="search" name="input_searchbar" id="input_searchbar" onChange={searchCharacterByName}/>
                     <button>Buscar</button>
                 </div>
 

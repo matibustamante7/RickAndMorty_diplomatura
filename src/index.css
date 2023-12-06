@@ -13,3 +13,6 @@
     --Mystery: #a6cccc;
     --Calla-Green:#6b7132;
 }
+body{
+    background-color: var(--Mystery);
+}

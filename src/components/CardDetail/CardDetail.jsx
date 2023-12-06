@@ -1,42 +1,36 @@
 
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import './CardDetail.css'
+import CharacterContext from '../../Context/CharacterContext';
 
 export default function CardDetail() {
 
-    const [character, setCharacter] = useState({})
 
     const { idCharacter } = useParams();
 
-    const getCharacterById = async () => {
-
-        const urlApi = `https://rickandmortyapi.com/api/character/${idCharacter}`
-
-        const response = await axios.get(urlApi)
-        const data = response.data
-        setCharacter(data)
-    }
+    const {getCharacterById, characterDetail} = useContext(CharacterContext)
 
     useEffect(() => {
-        getCharacterById()
+        getCharacterById(idCharacter)
     }, [])
-    // console.log(character);
+    // console.log(characterDetail);
 
     return (
-        <div className='card_detail__container'>
-            <div className="subcontainer">
-                {character.name ? <h2>{character.name}</h2> : ''}
-                {character.gender ? <h3>Gender: {character.gender}</h3>: ''}
-                {character.status ? <h3>Status: {character.status}</h3> : ''}
-                {character.type ? <h3>Type: {character.type}</h3> : ''}
-                {character.location?.name ? <h3>Location: {character.location?.name}</h3> : ''}
-            </div>
-            <div className="subcontainer">
-                <img src={character.image} alt={character.name} />
-            </div>
+        <div className='container_detail'>
+            <div className='card_detail__container'>
+                <div className="subcontainer">
+                    {characterDetail.name ? <h2>{characterDetail.name}</h2> : ''}
+                    {characterDetail.gender ? <h3>Gender: {characterDetail.gender}</h3> : ''}
+                    {characterDetail.status ? <h3>Status: {characterDetail.status}</h3> : ''}
+                    {characterDetail.type ? <h3>Type: {characterDetail.type}</h3> : ''}
+                    {characterDetail.location?.name ? <h3>Location: {characterDetail.location?.name}</h3> : ''}
+                </div>
+                <div className="subcontainer">
+                    <img src={characterDetail.image} alt={characterDetail.name} />
+                </div>
 
+            </div>
         </div>
     )
 }
