@@ -24,13 +24,9 @@ export default function Header() {
 
                 <div className="searchbar">
                     <input type="search" name="input_searchbar" id="input_searchbar" onChange={searchCharacterByName}/>
-                    <button>Buscar</button>
+                    <button className='input_option btn_header'>Buscar</button>
                 </div>
 
-                <div className="container_buttons">
-                    <button>Button 1</button>
-                    <button>Button 2</button>
-                </div>
             </nav>
         </div>
 

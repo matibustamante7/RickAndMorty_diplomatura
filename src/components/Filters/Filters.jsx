@@ -21,28 +21,31 @@ export default function Filters() {
     return (
         <div className="filters_container">
             <div className="filter_subcontainer">
-                <label>Status </label>
-                <select name="status" onChange={handleChangeStatus}>
-                    <option value="alive">Alive</option>
-                    <option value="dead">Dead</option>
-                    <option value="unknown">Unknown</option>
+                <label className="input_label">Status </label>
+                <select name="status" onChange={handleChangeStatus} className="input_select">
+                    <option value="" className="input_option"></option>
+                    <option value="alive" className="input_option">Alive</option>
+                    <option value="dead" className="input_option">Dead</option>
+                    <option value="unknown" className="input_option">Unknown</option>
                 </select>
             </div>
             <div className="filter_subcontainer">
-                <label>Gender </label>
-                <select name="status" onChange={handleChangeGender}>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="genderless">Genderless</option>
-                    <option value="unknown">Unknown</option>
+                <label className="input_label">Gender </label>
+                <select name="status" onChange={handleChangeGender} className="input_select">
+                    <option value="" className="input_option"></option>
+                    <option value="Male" className="input_option">Male</option>
+                    <option value="Female" className="input_option">Female</option>
+                    <option value="genderless" className="input_option">Genderless</option>
+                    <option value="unknown" className="input_option">Unknown</option>
                 </select>
             </div>
             <div className="filter_subcontainer">
-                <label>Species </label>
-                <select name="status" onChange={handleChangeSpecies}>
-                    <option value="Human">Human</option>
-                    <option value="Humanoid">Humanoid</option>
-                    <option value="Alien">Alien</option>
+                <label className="input_label">Species </label>
+                <select name="status" onChange={handleChangeSpecies} className="input_select">
+                    <option value="" className="input_option"></option>
+                    <option value="Human" className="input_option">Human</option>
+                    <option value="Humanoid" className="input_option">Humanoid</option>
+                    <option value="Alien" className="input_option">Alien</option>
                 </select>
             </div>
         </div>

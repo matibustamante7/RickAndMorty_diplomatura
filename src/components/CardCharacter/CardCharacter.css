@@ -12,6 +12,7 @@
 .card_container img{
     border-radius: 15px 15px 0px 0px;
     width: 100%;
+    border-bottom: 2px solid var(--tardis-blue);
 }
 
 .card_content{
@@ -23,6 +24,11 @@
     gap: 1rem;
     text-align: center;
 }
+.card_content h2{
+    color: var(--tardis-blue);
+    font-weight: 800;
+    font-size: 30px;
+}
 .card_content button{
     background-color: transparent;
     border: none;
@@ -32,10 +38,18 @@
     width: 200px;
 }
 .link_btn{
-    font-weight: 400;
+    border-radius: 15px;
+    border: 2px solid var(--tardis-blue);
+    padding: .5rem;
+    font-weight: 500;
+    background-color: var(--Mystery);
     text-decoration: none;
     color: var(--tardis-blue);
 }
 .link_btn:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    background-color: var(--tardis-blue);
+    color: var(--Mystery);
+    /* border: 2px solid var(--Mystery); */
+    transition: .3s;
 }

@@ -16,7 +16,6 @@ export default function CardsContainer() {
 
     return (
         <div className='cards_container_container'>
-            <h1>Lista de personajes</h1>
             <Filters/>
             <Pagination/>
             <div className='cards_container'>

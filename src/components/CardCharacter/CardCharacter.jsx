@@ -11,7 +11,7 @@ export default function CardCharacter(characterData) {
             <div className="card_content">
                 <h2>{character.name}</h2>
                 <button>
-                    <Link to={`/${character.id}`} className='link_btn'>Ver mas...</Link>
+                    <Link to={`/${character.id}`} className='link_btn'>Ver mas</Link>
                 </button>
             </div>
         </div>

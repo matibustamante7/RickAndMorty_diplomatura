@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import CharacterContext from "../../Context/CharacterContext";
-
+import './Pagination.css'
 export default function Pagination() {
 
     const {selectPage} = useContext(CharacterContext)
@@ -22,9 +22,9 @@ export default function Pagination() {
     }
 
     return (
-        <div>
-            <button onClick={handlePrevPage}>prev</button>
-            <button onClick={handleNextPage}>next</button>
+        <div className="pagination_container">
+            <button onClick={handlePrevPage} className="btn_pagination">prev</button>
+            <button onClick={handleNextPage} className="btn_pagination">next</button>
         </div>
     )
 }
