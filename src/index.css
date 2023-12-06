@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --kiwi-green:#88e23b;
+    --texas:#ebe480 ;
+    --tardis-blue:#043c6e;
+    --endo:#60a85f;
+    --Mystery: #a6cccc;
+    --Calla-Green:#6b7132;
+}
