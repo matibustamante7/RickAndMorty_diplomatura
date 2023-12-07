@@ -4,7 +4,7 @@ import CardCharacter from '../CardCharacter/CardCharacter';
 import './CardsContainer.css'
 import CharacterContext from '../../Context/CharacterContext';
 import Filters from '../Filters/Filters';
-import Pagination from '../Pagination/Pagination';
+// import Pagination from '../Pagination/Pagination';
 export default function CardsContainer() {
 
     const {getCharacters, characters} = useContext(CharacterContext)
@@ -17,15 +17,15 @@ export default function CardsContainer() {
     return (
         <div className='cards_container_container'>
             <Filters/>
-            <Pagination/>
             <div className='cards_container'>
+                
                 {
                     characters?.map((character) => (
                         <CardCharacter key={character.id} characterData={character} />
                     ))
                 }
             </div>
-            <Pagination/>
+            {/* <Pagination/> */}
         </div>
     )
 }

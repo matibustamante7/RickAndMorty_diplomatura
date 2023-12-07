@@ -1,23 +1,29 @@
-.filters_container{
+.filters_container {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
-    gap:4rem;
+    flex-direction: column;
+    gap: 1rem;
     margin: 2rem;
 }
-.filter_subcontainer{
+
+.filter_subcontainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
-.input_label{
-    font-size: 24px;
+
+.input_label {
+    font-size: 20px;
     font-weight: 500;
 }
-.input_option, .input_select{
-    width: 200px;
+
+.input_option,
+.input_select {
+    width: 160px;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -25,10 +31,69 @@
     border: none;
     border-radius: 15px;
     color: var(--Mystery);
-    padding: .5rem;
+    padding: .3rem;
 }
-.input_option:hover, .input_select:hover{
+
+.input_option:hover,
+.input_select:hover {
     cursor: pointer;
     box-shadow: 0px 2px 12px 2px var(--tardis-blue);
-    transition: .3s;    
+    transition: .3s;
+}
+
+
+@media (max-width:1300px) {
+    .filters_container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:1130px) {
+    .filters_container {
+        /* flex-direction: column; */
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .filter_subcontainer {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* gap: 1rem; */
+        width: 100%;
+        /* border: 2px solid green; */
+    }
+
+    .input_label {
+        font-size: 16px;
+    }
+
+    .input_option,
+    .input_select {
+        width: 100px;
+        /* text-align: center; */
+        font-size: 16px;
+        font-weight: 300;
+        /* background-color: var(--tardis-blue); */
+        /* border: none; */
+        /* border-radius: 15px; */
+        /* color: var(--Mystery); */
+        padding: .3rem;
+    }
+
+
+}
+
+@media (max-width:900px) {
+    .filters_container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:420px){
+    .filters_container{
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
 }
