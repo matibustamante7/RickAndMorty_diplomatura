@@ -1,18 +1,20 @@
 .pagination_container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
     gap: 1.3rem;
+    /* border: 2px solid var(--tardis-blue); */
+    /* width: 300px; */
 }
 .btn_pagination{
-    /* width: 100px; */
+    width: 100px;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
-    background-color: var(--tardis-blue);
-    border: none;
+    background-color: var(--texas);
+    border: 2px solid var(--tardis-blue);
     border-radius: 15px;
-    color: var(--Mystery);
+    color: var(--tardis-blue);
     padding: .5rem;
 }
 .btn_pagination:hover{
